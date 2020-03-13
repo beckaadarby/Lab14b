@@ -6,6 +6,7 @@ public class Train{
 
   private int xPos;
   private int yPos;
+  private int index;
   private String type;
   private Color color;
   ArrayList<RailCar> train;
@@ -18,8 +19,6 @@ public class Train{
   }
 
   public void addCar(String type, Color color){
-
-
     if(type== "Locomotive"){
       train.add(new Locomotive(color,(xPos*(train.size()+1)), yPos));
     }else if(type=="PassengerCar"){
@@ -34,6 +33,16 @@ public class Train{
     }
 
     //System.out.println("Car Added");
+  }
+
+  public void addCar(int index, String type, Color color){
+    if(type== "PassengerCar"){
+      RailCar passengerCar = new PassengerCar(color, xPos*(train.size()+ 1)+(75*train.size()), yPos);
+      train.add(index, passengerCar);
+    }else if(type== "FreightCar"){
+      RailCar freightCar = new FreightCar(color, xPos*(train.size()+1)+(75*train.size()), yPos);
+      train.add(index, freightCar);
+    }
   }
 
 
