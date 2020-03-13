@@ -4,7 +4,7 @@
 
 
 
-import java.awt.*;
+/*import java.awt.*;
 import java.applet.*;
 
 
@@ -25,3 +25,4 @@ public class Lab14bv100 extends Applet
 	}
 }
 
+*/

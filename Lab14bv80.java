@@ -11,6 +11,7 @@ public class Lab14bv80 extends Applet
 {
 	public void paint(Graphics g)
 	{
+
       Train train = new Train(100,300);
       train.addCar("Locomotive",Color.blue);
       train.addCar("PassengerCar",Color.gray);
@@ -23,4 +24,3 @@ public class Lab14bv80 extends Applet
       train.showCars(g);
 	}
 }
-
